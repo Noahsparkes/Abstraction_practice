@@ -2,15 +2,19 @@ function Employee(name, age, baseSalary){
     this.name = name;
     this.age = age;
     this.baseSalary = baseSalary;
-    this.monthlyBonus = 
+    this.monthlyBonus = 1000;
 
-    finalSalary = baseSalary + monthlyBonus
+   this.calculateFinalSalary = function(){
+     let finalSalary = this.baseSalary + this.monthlyBonus;
+     console.log('Final salary is : ' + finalSalary);
+   }
 
 
     this.getEmpDetails = function(){
-        console.log('name : ' +this.name+' | age :'+this.age);
+        console.log('Name : ' +this.name+' | Age :'+this.age);
     }
 }
 
 let emp1 = new Employee('John', 30, 2000);
 emp1.getEmpDetails();
+
